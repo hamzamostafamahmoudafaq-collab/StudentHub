@@ -1,4 +1,4 @@
-const url = "http://127.0.0.1:8000";
+const url = "https://studenthub-1-b9rt.onrender.com";
 
 const cards = document.querySelector(".cards");
 const totalStudents = document.querySelector("#total-students");
