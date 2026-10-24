@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>StudentHub Dashboard</title>
+
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <aside class="sidebar">
+        <h2>StudentHub</h2>
+
+        <nav>
+          <a href="/" class="active">Dashboard</a>
+          <a href="#students">Students</a>
+          <a href="#add-student">Add Student</a>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="header">
+          <div>
+            <h1>Dashboard Overview</h1>
+            <p>Manage your students in one place.</p>
+          </div>
+        </header>
+
+        <section class="stats">
+          <div class="stat-card">
+            <h3>Total Students</h3>
+            <p id="total-students">0</p>
+          </div>
+
+          <div class="stat-card">
+            <h3>Management</h3>
+            <p>Students</p>
+          </div>
+        </section>
+
+        <section id="students" class="students-section">
+          <div class="section-header">
+            <h2>All Students</h2>
+
+            <button onclick="allStudents()">Load Students</button>
+          </div>
+
+          <div class="cards"></div>
+        </section>
+      </main>
+    </div>
+    <section id="add-student" class="add-section">
+      <div class="section-header">
+        <h2>Add New Student</h2>
+      </div>
+
+      <form id="student-form">
+        <div class="form-group">
+          <label for="student-name">Student Name</label>
+          <input
+            type="text"
+            id="student-name"
+            placeholder="Enter student name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="student-age">Student Age</label>
+          <input
+            type="number"
+            id="student-age"
+            placeholder="Enter student age"
+            min="1"
+            required
+          />
+        </div>
+
+        <button type="submit">Add Student</button>
+
+        <p id="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+    <script src="/static/main.js"></script>
+  </body>
+</html>
